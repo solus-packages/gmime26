@@ -1,3 +1,7 @@
+libgmime-2.6.so.0:__bss_start
+libgmime-2.6.so.0:_edata
+libgmime-2.6.so.0:_end
+libgmime-2.6.so.0:_fini
 libgmime-2.6.so.0:_g_mime_charset_lock
 libgmime-2.6.so.0:_g_mime_charset_unlock
 libgmime-2.6.so.0:_g_mime_enable_rfc2047_workarounds
@@ -13,6 +17,7 @@ libgmime-2.6.so.0:_g_mime_object_set_content_type
 libgmime-2.6.so.0:_g_mime_use_only_user_charsets
 libgmime-2.6.so.0:_g_mime_utils_structured_header_fold
 libgmime-2.6.so.0:_g_mime_utils_unstructured_header_fold
+libgmime-2.6.so.0:_init
 libgmime-2.6.so.0:g_mime_certificate_get_created
 libgmime-2.6.so.0:g_mime_certificate_get_digest_algo
 libgmime-2.6.so.0:g_mime_certificate_get_email
@@ -508,6 +513,13 @@ libgmime-2.6.so.0:g_trie_free
 libgmime-2.6.so.0:g_trie_new
 libgmime-2.6.so.0:g_trie_quick_search
 libgmime-2.6.so.0:g_trie_search
+libgmime-2.6.so.0:gmime_binary_age
+libgmime-2.6.so.0:gmime_error_quark
+libgmime-2.6.so.0:gmime_gpgme_error_quark
+libgmime-2.6.so.0:gmime_interface_age
+libgmime-2.6.so.0:gmime_major_version
+libgmime-2.6.so.0:gmime_micro_version
+libgmime-2.6.so.0:gmime_minor_version
 libgmime-2.6.so.0:internet_address_get_name
 libgmime-2.6.so.0:internet_address_get_type
 libgmime-2.6.so.0:internet_address_group_add_member
