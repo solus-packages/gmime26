@@ -1,7 +1,6 @@
 libc.so.6:__ctype_b_loc
 libc.so.6:__ctype_tolower_loc
 libc.so.6:__ctype_toupper_loc
-libc.so.6:__fxstat
 libc.so.6:__sprintf_chk
 libc.so.6:__stack_chk_fail
 libc.so.6:_exit
@@ -9,6 +8,7 @@ libc.so.6:alarm
 libc.so.6:dup2
 libc.so.6:execvp
 libc.so.6:fclose
+libc.so.6:fcntl
 libc.so.6:feof
 libc.so.6:ferror
 libc.so.6:fflush
@@ -18,6 +18,7 @@ libc.so.6:fork
 libc.so.6:fread
 libc.so.6:freeaddrinfo
 libc.so.6:fseek
+libc.so.6:fstat
 libc.so.6:ftell
 libc.so.6:fwrite
 libc.so.6:getaddrinfo
@@ -57,6 +58,7 @@ libc.so.6:strtoul
 libc.so.6:sysconf
 libc.so.6:time
 libc.so.6:uname
+libc.so.6:waitpid
 libgio-2.0.so.0:g_file_append_to
 libgio-2.0.so.0:g_file_get_type
 libgio-2.0.so.0:g_file_read
@@ -120,7 +122,6 @@ libglib-2.0.so.0:g_return_if_fail_warning
 libglib-2.0.so.0:g_set_error
 libglib-2.0.so.0:g_set_error_literal
 libglib-2.0.so.0:g_slice_alloc
-libglib-2.0.so.0:g_slice_alloc0
 libglib-2.0.so.0:g_slice_free1
 libglib-2.0.so.0:g_slice_free_chain_with_offset
 libglib-2.0.so.0:g_snprintf
@@ -161,13 +162,11 @@ libgobject-2.0.so.0:g_type_class_ref
 libgobject-2.0.so.0:g_type_register_static
 libpthread.so.0:__errno_location
 libpthread.so.0:close
-libpthread.so.0:fcntl
 libpthread.so.0:fsync
 libpthread.so.0:lseek
 libpthread.so.0:msync
 libpthread.so.0:open
 libpthread.so.0:read
-libpthread.so.0:waitpid
 libpthread.so.0:write
 libz.so.1:crc32
 libz.so.1:deflate

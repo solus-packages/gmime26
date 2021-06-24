@@ -4,14 +4,14 @@
         <Homepage>http://spruce.sourceforge.net/gmime/</Homepage>
         <Packager>
             <Name>Joshua Strobl</Name>
-            <Email>joshua@stroblindustries.com</Email>
+            <Email>joshua@getsol.us</Email>
         </Packager>
         <License>LGPL-2.1</License>
         <PartOf>programming.library</PartOf>
         <Summary xml:lang="en">GMime 2.6 legacy library</Summary>
         <Description xml:lang="en">GMime 2.6 legacy library
 </Description>
-        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://getsol.us/sources/README.Solus</Archive>
     </Source>
     <Package>
         <Name>gmime26</Name>
@@ -21,7 +21,8 @@
         <PartOf>programming.library</PartOf>
         <Files>
             <Path fileType="library">/usr/lib64/girepository-1.0/GMime-2.6.typelib</Path>
-            <Path fileType="library">/usr/lib64/lib*.so.*</Path>
+            <Path fileType="library">/usr/lib64/libgmime-2.6.so.0</Path>
+            <Path fileType="library">/usr/lib64/libgmime-2.6.so.0.623.0</Path>
             <Path fileType="data">/usr/share/gir-1.0/GMime-2.6.gir</Path>
         </Files>
     </Package>
@@ -32,13 +33,66 @@
 </Description>
         <PartOf>programming.devel</PartOf>
         <RuntimeDependencies>
-            <Dependency release="1">gmime26</Dependency>
+            <Dependency release="2">gmime26</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="header">/usr/include/</Path>
-            <Path fileType="library">/usr/lib64/lib*.so</Path>
-            <Path fileType="data">/usr/lib64/pkgconfig/*.pc</Path>
-            <Path fileType="data">/usr/share/vala*/vapi/*</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-certificate.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-charset.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-content-type.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-crypto-context.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-data-wrapper.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-disposition.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-encodings.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-error.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-filter-basic.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-filter-best.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-filter-charset.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-filter-crlf.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-filter-enriched.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-filter-from.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-filter-gzip.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-filter-html.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-filter-md5.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-filter-strip.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-filter-windows.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-filter-yenc.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-filter.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-gpg-context.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-header.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-iconv-utils.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-iconv.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-message-part.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-message-partial.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-message.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-multipart-encrypted.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-multipart-signed.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-multipart.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-object.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-param.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-parser.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-part-iter.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-part.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-pkcs7-context.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-signature.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-stream-buffer.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-stream-cat.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-stream-file.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-stream-filter.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-stream-fs.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-stream-gio.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-stream-mem.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-stream-mmap.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-stream-null.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-stream-pipe.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-stream.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-utils.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime-version.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/gmime.h</Path>
+            <Path fileType="header">/usr/include/gmime-2.6/gmime/internet-address.h</Path>
+            <Path fileType="library">/usr/lib64/libgmime-2.6.so</Path>
+            <Path fileType="data">/usr/lib64/pkgconfig/gmime-2.6.pc</Path>
+            <Path fileType="data">/usr/share/vala/vapi/gmime-2.6.deps</Path>
+            <Path fileType="data">/usr/share/vala/vapi/gmime-2.6.vapi</Path>
         </Files>
     </Package>
     <Package>
@@ -48,16 +102,102 @@
 </Description>
         <PartOf>programming.docs</PartOf>
         <Files>
-            <Path fileType="doc">/usr/share/gtk-doc/html/</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/CryptoContexts.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/DataWrappers.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/Filters.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeCertificate.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeContentDisposition.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeContentType.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeCryptoContext.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeDataWrapper.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeFilter.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeFilterBasic.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeFilterBest.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeFilterCRLF.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeFilterCharset.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeFilterEnriched.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeFilterFrom.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeFilterGZip.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeFilterHTML.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeFilterMd5.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeFilterStrip.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeFilterWindows.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeFilterYenc.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeGpgContext.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeMessage.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeMessagePart.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeMessagePartial.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeMultipart.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeMultipartEncrypted.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeMultipartSigned.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeObject.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeParser.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimePart.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimePkcs7Context.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeSignature.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeStream.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeStreamBuffer.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeStreamCat.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeStreamFile.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeStreamFilter.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeStreamFs.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeStreamMem.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeStreamMmap.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeStreamNull.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/GMimeStreamPipe.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/Headers.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/InternetAddress.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/InternetAddressGroup.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/InternetAddressList.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/InternetAddressMailbox.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/InternetAddresses.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/MimeParts.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/Parsers.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/Streams.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/ch01.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/classes.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/core.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/fundamentals.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-2.6.devhelp2</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-GMimeHeader.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-GMimeParam.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-GMimePartIter.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-building.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-changes-2-0.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-changes-2-2.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-changes-2-4.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-changes-2-6.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-compiling.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-data-wrappers.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-filters.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-gmime-charset.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-gmime-encodings.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-gmime-iconv-utils.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-gmime-iconv.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-gmime-utils.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-gmime.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-question-index.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-resources.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime-streams.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/gmime.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/home.png</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/index.html</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/left-insensitive.png</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/left.png</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/right-insensitive.png</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/right.png</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/style.css</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/up-insensitive.png</Path>
+            <Path fileType="doc">/usr/share/gtk-doc/html/gmime-2.6/up.png</Path>
         </Files>
     </Package>
     <History>
-        <Update release="1">
-            <Date>2017-10-08</Date>
+        <Update release="2">
+            <Date>2021-06-24</Date>
             <Version>2.6.23</Version>
             <Comment>Packaging update</Comment>
             <Name>Joshua Strobl</Name>
-            <Email>joshua@stroblindustries.com</Email>
+            <Email>joshua@getsol.us</Email>
         </Update>
     </History>
 </PISI>

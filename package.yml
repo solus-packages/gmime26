@@ -1,6 +1,6 @@
 name       : gmime26
 version    : 2.6.23
-release    : 1
+release    : 2
 source     :
     - https://download.gnome.org/sources/gmime/2.6/gmime-2.6.23.tar.xz : 7149686a71ca42a1390869b6074815106b061aaeaaa8f2ef8c12c191d9a79f6a
 homepage   : http://spruce.sourceforge.net/gmime/
